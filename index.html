@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Sign-up form start -->
+      <div class="signup__container" id="signup-container">
+        <picture class="signup__image">
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 23.439rem)" alt="image desktop"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="image-mobile"
+          />
+        </picture>
+        <h1 class="signup__title">Stay updated!</h1>
+
+        <p class="signup__description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="signup__list">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form class="signup__form" id="subscribe-form">
+          <div class="signup__form--input">
+            <label for="email"><p><strong>Email address</strong></p><p class="alert" id="alert"><strong>Valid email required</strong></p></strong></label>
+            <textarea
+              id="email"
+              name="email"
+              rows="4"
+              required
+              aria-required="true"
+              placeholder="email@company.com"
+            ></textarea>
+          </div>
+          <div class="signup__form--submit">
+            <button type="submit" id="submit">Subscribe to monthly newsletter</button>
+          </div>
+        </form>
+      </div>
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+      <div class="success__container" id="success-container">
+        <img src="./assets/images/icon-success.svg" alt="success image">
+        <h1>Thanks for subscribing!</h1> 
+        <p>A confirmation email has been sent to
+          <strong class="confirmed"></strong>. Please open it and click the button inside to
+          confirm your subscription.</p> 
+          <button class="dismiss__btn" id="dismiss-btn">Dismiss message</button>
+      </div>
+
+      <!-- Success message end -->
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Kristina Jevčenko-Kozlovska</a>.
+      </div>
+    </main>
+    <script src="subscribe.js"></script>
+  </body>
+</html>
